@@ -1,0 +1,24 @@
+{
+    "apps": {
+    "remote":{
+        "remoteEntry": "http://localhost:9011/remoteEntry.js",
+         "exposedModule": "./Module",
+         "displayName": "Remote",
+         "routePath": "remote",
+         "ngModuleName": "InnerremModule"
+    },
+    "webComponent":{
+        "remoteEntry": "http://localhost:9012/remoteEntry.js",
+         "exposedModule": "./webComponent",
+         "displayName": "webcomp",
+         "routePath": "webcomp",
+         "ngModuleName": ""
+    },
+    "standalone":{
+        "remoteEntry": "http://localhost:9013/remoteEntry.js",
+         "exposedModule": "./routes",
+         "displayName": "standalone",
+         "routePath": "standalone",
+         "ngModuleName": "routes"
+    }
+}}

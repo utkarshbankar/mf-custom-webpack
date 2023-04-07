@@ -1,0 +1,6 @@
+<p>manifestloader works!</p>
+<!-- Here the routes are made form the manifest file -->
+<ul>
+  <li *ngFor="let remote of remotesArr"><a [routerLink]="remote.routePath">{{remote.displayName}}</a></li>
+</ul>
+<router-outlet></router-outlet>
