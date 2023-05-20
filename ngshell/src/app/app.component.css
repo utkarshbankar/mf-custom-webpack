@@ -291,3 +291,11 @@
       visibility: hidden;
     }
   }
+
+.nav-bar{
+  background-color: aquamarine;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}  

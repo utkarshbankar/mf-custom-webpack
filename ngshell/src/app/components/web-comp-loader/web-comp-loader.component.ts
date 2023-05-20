@@ -16,7 +16,7 @@ export class WebCompLoaderComponent  {
   constructor() { }
   
   testEventBinding(e:any){
-    alert('from shell comp to test event binding of web comp ony  for now'+ JSON.stringify(e));
+    alert('from shell comp '+ JSON.stringify(e));
   }
 }
    

@@ -35,7 +35,7 @@
   }
 
   .toolbar {
-    position: absolute;
+    position: static;
     top: 0;
     left: 0;
     right: 0;
@@ -332,6 +332,9 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<br>
+Fire and Forget event-
+<button (click)="raiseEvent()">click-from remote</button>
 <br>
 This is a app component from remote apps and this is loaded through exposed './Compoenent' and hence we can not access child routes with this approach
 <br><br>

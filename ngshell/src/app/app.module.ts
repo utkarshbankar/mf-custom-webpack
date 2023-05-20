@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { WebCompLoaderComponent } from './web-comp-loader/web-comp-loader.component';
+import { WebCompLoaderComponent } from './components/web-comp-loader/web-comp-loader.component';
 
 import { startsWith, WebComponentWrapper, WebComponentWrapperOptions, ModuleFederationToolsModule } from '@angular-architects/module-federation-tools';
 import { FormsModule } from '@angular/forms';
@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppInitilizerService } from './initsrv/app-initilizer.service';
 import { APP_ROUTES } from './routes';
 import { CompLoaderComponent } from './components/comp-loader/comp-loader.component';
-import { ManifestloaderComponent } from './manifestloader/manifestloader.component'; 
+import { ManifestloaderComponent } from './components/manifestloader/manifestloader.component'; 
 
 @NgModule({
   declarations: [

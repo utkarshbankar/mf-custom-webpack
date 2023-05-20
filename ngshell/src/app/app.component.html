@@ -1,5 +1,5 @@
-<div class="content" role="main">
-  <!-- Highlight Card -->
+<!-- <div class="content" role="main">
+  <!-- Highlight Card ->
   <div class="card highlight-card card-small">
     <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
       <title>Rocket Ship</title>
@@ -13,10 +13,16 @@
     </svg>
     <span>{{ title }} app is running!</span>
       </div>
-</div>
-
+</div> -->
+<div style="display: flex; justify-content: center;font-size: medium;font-weight: bold;">Main container - shell</div>
+<div class="nav-bar">
 <a [routerLink]="['/remoteloaderComp']" routerLinkActive="router-link-active">remoteloaderComp</a> <br>
 <a [routerLink]="['/customCompLoader']" routerLinkActive="router-link-active">customWebcompLoader</a> <br>
 <a [routerLink]="['/manifestLoader']" routerLinkActive="router-link-active">manifestLoader</a> 
+</div>
+The above routes are the wrapper to load the remote apps in different ways and the route name itself suggest the way to load remote.
+<button (click)="raiseCustomEvent()">click2</button>
+<div style="border: 2px dotted brown;margin-top: 20px ;">
+  <router-outlet></router-outlet>
 
-<router-outlet></router-outlet>
+</div>

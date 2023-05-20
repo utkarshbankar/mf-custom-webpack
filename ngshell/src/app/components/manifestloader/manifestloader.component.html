@@ -4,4 +4,6 @@ Here !!!  the webcomp route is not loading due to config used in webpack of angu
 <ul>
   <li *ngFor="let remote of remotesArr"><a [routerLink]="remote.routePath">{{remote.displayName}}</a></li>
 </ul>
-<router-outlet></router-outlet>
+<div style="border: 2px dotted green;margin: 10px; padding: 10px;">
+  <router-outlet></router-outlet>
+</div>

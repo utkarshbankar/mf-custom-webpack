@@ -2,8 +2,8 @@ import { getManifest } from '@angular-architects/module-federation';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { buildRoutes } from '../utils/buildRoutes';
-import { MFCustomManifest } from '../utils/routerConfig';
+import { buildRoutes } from '../../utils/buildRoutes';
+import { MFCustomManifest } from '../../utils/routerConfig';
 
 @Component({
   selector: 'app-manifestloader',

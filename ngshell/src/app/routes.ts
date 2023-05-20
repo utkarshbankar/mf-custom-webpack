@@ -1,7 +1,7 @@
 import { getManifest, loadRemoteModule } from "@angular-architects/module-federation";
 import { RemoteLoaderComponent } from "./dynamic-remote-loader/remote-loader.component";
-import { WebCompLoaderComponent } from "./web-comp-loader/web-comp-loader.component";
-import { ManifestloaderComponent } from "./manifestloader/manifestloader.component";
+import { WebCompLoaderComponent } from "./components/web-comp-loader/web-comp-loader.component";
+import { ManifestloaderComponent } from "./components/manifestloader/manifestloader.component";
 import { MFCustomManifest } from "./utils/routerConfig";
 import { buildRoutes } from "./utils/buildRoutes";
 
