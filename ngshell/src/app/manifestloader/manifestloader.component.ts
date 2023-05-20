@@ -23,7 +23,6 @@ export class ManifestloaderComponent implements OnInit {
       
       const childRoutes = buildRoutes(manifestData);
       
-      console.log("call from manifest comp", this.router);
       let routerConfig = this.router['config'];
       routerConfig.forEach(elm => { 
         if(elm.path == 'manifestLoader')

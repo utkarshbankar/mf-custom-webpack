@@ -21,7 +21,6 @@ export class AppComponent {
   // }
 
   onWebComponetEventCall(){
-    console.log("here we are calling web compoennt method");
     this.webElementEventEmitter.emit('data from web element event');
   }
 

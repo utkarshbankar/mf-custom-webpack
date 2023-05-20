@@ -36,9 +36,8 @@ export class AppInitilizerService {
         this.manifestData = data;
         this.setManifestData(this.manifestData.apps);
                 
-        const manifestdata = getManifest() as any;
-        console.log("call from init service",manifestdata);
-        const buildRoutesData = buildRoutes(manifestdata);
+        // const manifestdata = getManifest() as any;
+        // const buildRoutesData = buildRoutes(manifestdata);
         })
       )
    }

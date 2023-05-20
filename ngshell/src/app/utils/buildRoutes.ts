@@ -19,8 +19,6 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
          }
      });
  
-    //  return [...APP_ROUTES, ...lazyRoutes];
-    console.log(lazyRoutes);
-    
+    //  return [...APP_ROUTES, ...lazyRoutes]; 
      return [...lazyRoutes];
  }
