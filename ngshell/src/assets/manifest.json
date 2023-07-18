@@ -12,7 +12,7 @@
          "exposedModule": "./webComponent",
          "displayName": "webcomp",
          "routePath": "webcomp",
-         "ngModuleName": ""
+         "ngModuleName": "AppModule"
     },
     "standalone":{
         "remoteEntry": "http://localhost:9013/remoteEntry.js",

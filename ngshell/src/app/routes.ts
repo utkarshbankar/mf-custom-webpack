@@ -4,6 +4,7 @@ import { WebCompLoaderComponent } from "./components/web-comp-loader/web-comp-lo
 import { ManifestloaderComponent } from "./components/manifestloader/manifestloader.component";
 import { MFCustomManifest } from "./utils/routerConfig";
 import { buildRoutes } from "./utils/buildRoutes";
+import { RmModLoaderComponent } from "./components/rm-mod-loader/rm-mod-loader.component";
 
 // const manifestRoutesData = getManifest<MFCustomManifest>();
 // const childRoutes = buildRoutes(manifestRoutesData);
@@ -25,7 +26,11 @@ export const APP_ROUTES = [
     {
       path:'manifestLoader',
       component:ManifestloaderComponent
-    }
+    },
+    {
+      path:'module-loader',
+      component:RmModLoaderComponent
+    },
     // This is rendering witout error but it is completely loading new page. - hence this is not recommanded
     // {
     //   path: 'webcomp',

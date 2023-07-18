@@ -12,7 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppInitilizerService } from './initsrv/app-initilizer.service';
 import { APP_ROUTES } from './routes';
 import { CompLoaderComponent } from './components/comp-loader/comp-loader.component';
-import { ManifestloaderComponent } from './components/manifestloader/manifestloader.component'; 
+import { ManifestloaderComponent } from './components/manifestloader/manifestloader.component';
+import { RmModLoaderComponent } from './components/rm-mod-loader/rm-mod-loader.component'; 
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ManifestloaderComponent } from './components/manifestloader/manifestloa
     WebCompLoaderComponent,
     RemoteLoaderComponent,
     CompLoaderComponent,
-    ManifestloaderComponent
+    ManifestloaderComponent,
+    RmModLoaderComponent
   ],
   imports: [
     BrowserModule,
