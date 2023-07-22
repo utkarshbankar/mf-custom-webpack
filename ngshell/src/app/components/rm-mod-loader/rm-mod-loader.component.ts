@@ -1,5 +1,5 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
-import { Component, Injector, AfterViewInit, ViewChild , ViewContainerRef, createNgModule} from '@angular/core';
+import { Component, Injector, AfterViewInit, ViewChild , ViewContainerRef, createNgModule, NgModuleRef} from '@angular/core';
 
 @Component({
   selector: 'app-rm-mod-loader',
@@ -17,9 +17,9 @@ export class RmModLoaderComponent implements AfterViewInit{
       remoteEntry: 'http://localhost:9014/remoteModuleExposeEntry.js',
       exposedModule: './module'
     }) ;
-    const modRef = createNgModule(m.LazyModule, this.injector);
-    const moduleFactory:any = modRef.instance;
-    this.remoteModule.createComponent(moduleFactory.resolveComponent())
+    const modRef:NgModuleRef<any> = createNgModule(m.LazyModule, this.injector);
+    const moduleFactory = modRef.instance.resolveComponent();
+    this.remoteModule.createComponent(moduleFactory, {ngModuleRef: modRef});
    }
  /**
   * pass all config to load the remote module and add the specific code to load the app
