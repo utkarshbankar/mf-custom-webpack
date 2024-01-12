@@ -20,5 +20,12 @@
          "displayName": "standalone",
          "routePath": "standalone",
          "ngModuleName": "routes"
+    },
+    "ng7TNApp":{
+        "remoteEntry": "http://localhost:5200/remoteEntry.js",
+         "exposedModule": "./routes",
+         "displayName": "ng7TNUI",
+         "routePath": "ng7TNUI",
+         "ngModuleName": "routes"
     }
 }}
