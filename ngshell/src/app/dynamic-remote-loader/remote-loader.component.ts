@@ -23,7 +23,7 @@ export class RemoteLoaderComponent implements OnInit {
     // const m = await import('ngremote/Component');
     const m = await loadRemoteModule({
       type: 'module',
-      remoteEntry: 'http://localhost:9011/remoteEntry.js',
+      remoteEntry: 'http://localhost:9011/ngRemoteEntry.js',
       exposedModule: './Component'
     }) ;
     const ref = this.viewContainer.createComponent(m.AppComponent);
