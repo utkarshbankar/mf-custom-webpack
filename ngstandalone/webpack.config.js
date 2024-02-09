@@ -30,7 +30,7 @@ module.exports = {
 
         // For remotes (please adjust)
         name: "ngstandalone",
-        filename: "remoteEntry.js",
+        filename: "standaloneRemoteEntry.js",
         exposes: {
             // './Component': './/src/app/app.component.ts',
             './routes': './/src/app/app-routes.ts',

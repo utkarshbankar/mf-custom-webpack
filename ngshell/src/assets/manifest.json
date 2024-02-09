@@ -1,28 +1,28 @@
 {
     "apps": {
     "remote":{
-        "remoteEntry": "http://localhost:9011/remoteEntry.js",
+        "remoteEntry": "http://localhost:9011/ngRemoteEntry.js",
          "exposedModule": "./Module",
          "displayName": "Remote",
          "routePath": "remote",
          "ngModuleName": "InnerremModule"
     },
     "webComponent":{
-        "remoteEntry": "http://localhost:9012/remoteEntry.js",
+        "remoteEntry": "http://localhost:9012/webCompRemoteEntry.js",
          "exposedModule": "./webComponent",
          "displayName": "webcomp",
          "routePath": "webcomp",
          "ngModuleName": "AppModule"
     },
     "standalone":{
-        "remoteEntry": "http://localhost:9013/remoteEntry.js",
+        "remoteEntry": "http://localhost:9013/standaloneRemoteEntry.js",
          "exposedModule": "./routes",
          "displayName": "standalone",
          "routePath": "standalone",
          "ngModuleName": "routes"
     },
     "ng7TNApp":{
-        "remoteEntry": "http://localhost:5200/remoteEntry.js",
+        "remoteEntry": "http://localhost:4200/remoteEntry.js",
          "exposedModule": "./routes",
          "displayName": "ng7TNUI",
          "routePath": "ng7TNUI",

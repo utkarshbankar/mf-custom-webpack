@@ -30,7 +30,7 @@ module.exports = {
 
         // For remotes (please adjust)
         name: "ngweb",
-        filename: "remoteEntry.js",
+        filename: "webCompRemoteEntry.js",
         exposes: {
             './webComponent': './src/bootstrap.ts',
         },        
