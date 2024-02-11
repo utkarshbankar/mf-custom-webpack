@@ -18,3 +18,5 @@ web comp : 9012
 standalone: 9013
 External native federation : 
 
+webpack config versioning must be updated.
+
