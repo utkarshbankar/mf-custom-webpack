@@ -26,6 +26,6 @@
          "exposedModule": "./routes",
          "displayName": "ng7TNUI",
          "routePath": "ng7TNUI",
-         "ngModuleName": "routes"
+         "ngModuleName": "routesNg7TN"
     }
 }}
