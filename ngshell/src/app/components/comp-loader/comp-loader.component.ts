@@ -33,7 +33,7 @@ export class CompLoaderComponent implements AfterContentInit, AfterViewInit  {
 
   async createAppendAndeRenderWebComp(){
       const webElmName = document.createElement('script');
-      webElmName.src = "http://localhost:7001/ngweb/main.471635c640c99905.js";
+      webElmName.src = "http://localhost:9012/ngweb/main.ea87d151028da062.js";
       webElmName.type = 'module';
       document.body.appendChild(webElmName);
       await this.renderWebComponent();

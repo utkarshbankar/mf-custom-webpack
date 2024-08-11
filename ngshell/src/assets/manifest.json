@@ -7,13 +7,6 @@
          "routePath": "remote",
          "ngModuleName": "InnerremModule"
     },
-    "webComponent":{
-        "remoteEntry": "http://localhost:9012/webCompRemoteEntry.js",
-         "exposedModule": "./webComponent",
-         "displayName": "webcomp",
-         "routePath": "webcomp",
-         "ngModuleName": "AppModule"
-    },
     "standalone":{
         "remoteEntry": "http://localhost:9013/standaloneRemoteEntry.js",
          "exposedModule": "./routes",
