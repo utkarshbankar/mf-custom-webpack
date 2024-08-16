@@ -25,3 +25,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+Steps-
+
+To run the web comp.
+--  First install http-server if not installed and check the command.
+    `` "serve":"http-server ./dist -c-1 -p 9012" ``
+-- Run the command.    
+
+-- Manifest config we may add in manifest file.
+    ``
+    "webComponent":{
+        "remoteEntry": "http://localhost:9012/ngweb/main.ea87d151028da062.js",
+         "exposedModule": "./webComponent",
+         "displayName": "webcomp",
+         "routePath": "webcomp",
+         "ngModuleName": "AppModule"
+    }
+    ``
