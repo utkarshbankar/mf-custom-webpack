@@ -13,7 +13,8 @@ import { AppInitilizerService } from './initsrv/app-initilizer.service';
 import { APP_ROUTES } from './routes';
 import { CompLoaderComponent } from './components/comp-loader/comp-loader.component';
 import { ManifestloaderComponent } from './components/manifestloader/manifestloader.component';
-import { RmModLoaderComponent } from './components/rm-mod-loader/rm-mod-loader.component'; 
+import { RmModLoaderComponent } from './components/rm-mod-loader/rm-mod-loader.component';
+import { ReactCompLoaderComponent } from './components/react-comp-loader/react-comp-loader.component'; 
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RmModLoaderComponent } from './components/rm-mod-loader/rm-mod-loader.c
     RemoteLoaderComponent,
     CompLoaderComponent,
     ManifestloaderComponent,
-    RmModLoaderComponent
+    RmModLoaderComponent,
+    ReactCompLoaderComponent
   ],
   imports: [
     BrowserModule,

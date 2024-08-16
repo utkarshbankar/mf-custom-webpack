@@ -19,7 +19,8 @@ module.exports = {
   resolve: {
     alias: {
       ...sharedMappings.getAliases(),
-    }
+    },
+    extensions: ['.ts', '.js'],
   },
   experiments: {
     outputModule: true
@@ -41,6 +42,10 @@ module.exports = {
 
         // },
 
+        remotes: {
+          'MFERemoteApp': "http://localhost:5000/remoteEntry.js",
+          remoteType:'var',
+       },
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion : '>=15.1.0 <^17.0.0' }, 
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion : '>=15.1.0 <^17.0.0' }, 
