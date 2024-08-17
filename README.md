@@ -18,5 +18,5 @@ Here we need to handle update the event data
   
   External native federation : 
 
-webpack config versioning must be updated.
+webpack config versioning must be updated
 
