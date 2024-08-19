@@ -20,4 +20,5 @@ Here we need to handle update the event data
 
 webpack config versioning must be updated
 - update remote config for react webpack.
+- Native federation for the react app.
 
