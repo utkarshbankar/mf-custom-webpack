@@ -33,8 +33,8 @@ export class CompLoaderComponent implements AfterContentInit, AfterViewInit  {
 
   async createAppendAndeRenderWebComp(){
       const webElmName = document.createElement('script');
-      // webElmName.src = "http://localhost:9012/ngweb/main.ea87d151028da062.js";
-      webElmName.src = "http://localhost:5005/react-mfe-app/remoteEntry.js";
+      webElmName.src = "http://localhost:9012/ngweb/main.ea87d151028da062.js";
+      // webElmName.src = "http://localhost:5000/remoteEntry.js";
       //http://localhost:5005/remoteEntry.js
       webElmName.type = 'module';
       document.body.appendChild(webElmName);

@@ -44,14 +44,15 @@ module.exports = {
 
         remotes: {
           'MFERemoteApp': "http://localhost:5000/remoteEntry.js",
-          remoteType:'var',
        },
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion : '>=15.1.0 <^17.0.0' }, 
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion : '>=15.1.0 <^17.0.0' }, 
           "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion : '>=15.1.0 <^17.0.0' }, 
           "@angular/router": { singleton: true, strictVersion: true, requiredVersion : '>=15.1.0 <^17.0.0' },
-
+          'react': { singleton: true, strictVersion:true, requiredVersion : deps.react },
+          'react-dom': { singleton: true, strictVersion:true, requiredVersion : deps['react-dom'] },
+          'react-dom/client': { singleton: true, strictVersion:true, requiredVersion : deps['react-dom'] },
           ...sharedMappings.getDescriptors()
         })
         
