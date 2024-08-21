@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ReactLoaderService } from 'src/app/utils/reactloader/loader.service';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
+import { loadRemoteScript } from './remote-loader';
 
 
 @Component({
@@ -10,27 +10,60 @@ import * as ReactDOM from 'react-dom/client';
   styleUrls: ['./react-comp-loader.component.css']
 })
 export class ReactCompLoaderComponent implements OnInit {
-    appLoader: any;
-    ngOnInit(){
-      // This will won't work as we need to do some load external application with the web comp 
-      // this.appLoader = import('MFERemoteApp/App').then((module) => {
-      //   const MyComponent = module.default;
-      //   // Render or use MyComponent as needed
-      // });
+    
+  async ngOnInit(): Promise<void>{
+        try{
+          const remoteUrl = "http://localhost:5000/remoteEntry.js";
+          const scope = "MFERemoteApp"; //Remote App name 
+          const module = "./RemoteApp";
+
+          const RemoteApp =  await loadRemoteScript(remoteUrl, scope, module);
+          this.renderRemoteApp(RemoteApp);
+        } catch(err){
+          console.error('Error loading the remote app', err);
+        }
     }
 
-    
-    constructor(private reactLoader: ReactLoaderService) {}
-
-  ngAfterViewInit() {
-    const reactApp = this.reactLoader.getReactApp();
-    if (reactApp) {
+    renderRemoteApp(App:any){
       const container = document.getElementById('react-root');
-      if (container) {
-        // Render React app into the Angular component's DOM
+      if(container){
         const root = ReactDOM.createRoot(container);
-        root.render(React.createElement(reactApp));
+        root.render(React.createElement(App.default));
+      } else{
+        console.log('Container element not found');
       }
     }
-  }
 }
+
+
+/**
+ * old code
+ */
+
+// ngOnInit(){
+  // This will won't work as we need to do some load external application with the web comp 
+  // this.appLoader = import('MFERemoteApp/App').then((module) => {
+  //   const MyComponent = module.default;
+  //   // Render or use MyComponent as needed
+  // });
+// }
+    // constructor(private reactLoader: ReactLoaderService) {}
+
+  // async ngAfterViewInit() {
+  //   // const reactApp = this.reactLoader.getReactApp();
+  //   // const { MyComponent } = await import('MFERemoteApp/reactRemote');
+  //   // this.reactElement = MyComponent;
+  //   // console.log("MyComponentMyComponent", MyComponent);
+    
+  //   if (this.reactElement) {
+  //     const container = document.getElementById('react-root');
+  //   //   const React = (await import('react')).default;
+  //   // const ReactDOM = (await import('react-dom')).default;
+
+  //     if (container) {
+  //       // Render React app into the Angular component's DOM
+  //       const root = ReactDOM.createRoot(container);
+  //       root.render(React.createElement(this.reactElement));
+  //     }
+  //   }
+  // }
