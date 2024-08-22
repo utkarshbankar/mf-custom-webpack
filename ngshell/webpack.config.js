@@ -2,6 +2,8 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const mf = require("@angular-architects/module-federation/webpack");
 const path = require("path");
 const share = mf.share;
+const deps = require('./package.json').dependencies;
+
 
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
@@ -50,7 +52,7 @@ module.exports = {
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion : '>=15.1.0 <^17.0.0' }, 
           "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion : '>=15.1.0 <^17.0.0' }, 
           "@angular/router": { singleton: true, strictVersion: true, requiredVersion : '>=15.1.0 <^17.0.0' },
-          'react': { singleton: true, strictVersion:true, requiredVersion : deps.react },
+          react: { singleton: true, strictVersion:true, requiredVersion : deps.react },
           'react-dom': { singleton: true, strictVersion:true, requiredVersion : deps['react-dom'] },
           'react-dom/client': { singleton: true, strictVersion:true, requiredVersion : deps['react-dom'] },
           ...sharedMappings.getDescriptors()
