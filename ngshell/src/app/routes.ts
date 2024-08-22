@@ -16,7 +16,7 @@ import { ReactCompLoaderComponent } from "./components/react-comp-loader/react-c
 
 export const APP_ROUTES = [
     {
-      path: 'remoteloaderComp',
+      path: 'remoteLoaderComp',
       component:RemoteLoaderComponent
     },  
     // Here we are writing custamized logic to load the web-component

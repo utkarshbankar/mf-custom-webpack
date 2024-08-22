@@ -15,7 +15,7 @@ export class RemoteLoaderComponent implements OnInit {
   //  eleRef!: ElementRef;
   public mfdataObj:any;
    ngOnInit(){
-    this.mfdataObj = getManifest();
+    // this.mfdataObj = getManifest();
     this.load();
    }
    async load(): Promise<void> {
