@@ -22,4 +22,5 @@ webpack config versioning must be updated
 - update remote config for react webpack.
 - Native federation for the react app.
 - create app with react es builder.
+- https://github.com/manfredsteyer/native-federation-react-example
 
