@@ -1,2 +1,7 @@
-<p>react-comp-loader works!</p>
+<p>We are loading the react micro app.</p>
+<!-- <br>No Web Component loading, remote app loading. -->
+ 
+<div *ngIf="dataFromRemoteApp" style="border: 2px dotted aqua;padding: 5px;">
+   Data from child {{dataFromRemoteApp?.event}} & {{dataFromRemoteApp?.user | json}}
+ </div>   
 <div id="react-root"></div>
