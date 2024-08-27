@@ -10,7 +10,7 @@ import { loadRemoteScript } from './remote-loader';
   styleUrls: ['./react-comp-loader.component.css']
 })
 export class ReactCompLoaderComponent implements OnInit {
-    
+  dataFromRemoteApp:any ;  
   async ngOnInit(): Promise<void>{
         try{
           const remoteUrl = "http://localhost:5000/remoteEntry.js";
@@ -18,17 +18,26 @@ export class ReactCompLoaderComponent implements OnInit {
           const module = "./RemoteApp";
 
           const RemoteApp =  await loadRemoteScript(remoteUrl, scope, module);
-          this.renderRemoteApp(RemoteApp);
+          const HandelDataFromRemote = (data:any) => {
+            this.dataFromRemoteApp = data;
+          }
+
+          const props = {
+            msg: "Message from parent component- i.e. Angular shell",
+            onRemoteEventHandler:HandelDataFromRemote
+          }
+          this.renderRemoteApp(RemoteApp, props);
         } catch(err){
           console.error('Error loading the remote app', err);
         }
     }
 
-    renderRemoteApp(App:any){
+    renderRemoteApp(App:any, props:any){
       const container = document.getElementById('react-root');
+
       if(container){
         const root = ReactDOM.createRoot(container);
-        root.render(React.createElement(App.default));
+        root.render(React.createElement(App.default, props));
       } else{
         console.log('Container element not found');
       }
