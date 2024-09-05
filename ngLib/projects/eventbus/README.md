@@ -19,6 +19,4 @@ After building your library with `ng build eventbus`, go to the dist folder `cd 
 
 Run `ng test eventbus` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- For all kind of streaming you can use this so keep the back up. 
