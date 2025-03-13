@@ -37,15 +37,27 @@ export class CompLoaderComponent implements AfterContentInit, AfterViewInit  {
       // webElmName.src = "http://localhost:5000/remoteEntry.js";
       //http://localhost:5005/remoteEntry.js
       webElmName.type = 'module';
+      // document.body.appendChild(webElmName);
+      
+       // Ensure the script is loaded before proceeding
+      webElmName.onload = async () => {
+        console.log('Web component script loaded!');
+        await this.renderWebComponent();
+      };
+
+      webElmName.onerror = () => {
+        console.error("Failed to load web component script.");
+      };
+
       document.body.appendChild(webElmName);
-      await this.renderWebComponent();
+      // await this.renderWebComponent();
       // this.props && this.addPros(this.props);
       // this.events && this.addEvents(this.events);
   }
 
   renderWebComponent(){
-    // this.element = document.createElement('popup-element');
-    this.element = document.createElement('react-web-component');
+    this.element = document.createElement('popup-element');
+    // this.element = document.createElement('react-web-component');
     console.log("web comp elm", this.element);
     
     this.el.nativeElement.appendChild(this.element);
