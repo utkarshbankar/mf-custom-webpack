@@ -15,7 +15,7 @@ export class ReactCompLoaderComponent implements OnInit {
         try{
           const remoteUrl = "http://localhost:5000/remoteEntry.js";
           const scope = "MFERemoteApp"; //Remote App name 
-          const module = "./RemoteApp";
+          const module = "./App";
 
           const RemoteApp =  await loadRemoteScript(remoteUrl, scope, module);
           const HandelDataFromRemote = (data:any) => {
